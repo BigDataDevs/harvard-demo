@@ -1,0 +1,16 @@
+sudo: false
+branches:
+  only:
+    - master
+language: java
+jdk: oraclejdk8
+install:
+  - true
+
+
+# Run the Build
+notifications:
+  email: bigdatadev@dhyans.com
+script:
+  #- TERM=dumb ./gradlew clean bintrayUpload -Pbuild=${TRAVIS_BUILD_NUMBER} -Prelease=1.0
+  - TERM=dumb ./gradlew clean test 
